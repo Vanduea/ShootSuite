@@ -1,0 +1,104 @@
+/* Montserrat font import - Weights: 400, 500, 600, 700 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-montserrat: 'Montserrat', system-ui, sans-serif;
+    
+    /* Primary Brand Colors */
+    --color-primary-deep: #261A54;
+    --color-secondary-blue: #345EBE;
+    
+    /* Supporting Neutrals */
+    --color-text-dark: #0F172A;
+    --color-text-muted: #475569;
+    --color-border-gray: #E5E7EB;
+    --color-bg-light: #F8FAFC;
+    --color-bg-white: #FFFFFF;
+  }
+
+  body {
+    font-family: var(--font-montserrat);
+    color: var(--color-text-dark);
+    background: var(--color-bg-light);
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-text-dark);
+    font-weight: 700;
+  }
+}
+
+@layer components {
+  /* Primary Button */
+  .btn-primary {
+    @apply bg-primary text-white font-medium px-4 py-2 rounded-button;
+    @apply hover:opacity-90 active:opacity-80;
+    @apply transition-opacity duration-200;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+
+  /* Secondary Button */
+  .btn-secondary {
+    @apply bg-secondary text-white font-medium px-4 py-2 rounded-button;
+    @apply hover:opacity-90 active:opacity-80;
+    @apply transition-opacity duration-200;
+    @apply focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2;
+  }
+
+  /* Tertiary / Ghost Button */
+  .btn-tertiary {
+    @apply border-2 border-secondary text-secondary bg-transparent font-medium px-4 py-2 rounded-button;
+    @apply hover:bg-secondary hover:text-white;
+    @apply transition-colors duration-200;
+    @apply focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2;
+  }
+
+  /* Card */
+  .card {
+    @apply bg-white rounded-lg shadow-sm border border-border-gray p-6;
+  }
+
+  /* Input */
+  .input {
+    @apply w-full px-3 py-2 border border-border-gray rounded-lg;
+    @apply text-dark-text placeholder:text-muted-text;
+    @apply focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent;
+    @apply transition-all duration-200;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Type Scale Utilities */
+  .text-app-title {
+    @apply text-[28px] leading-tight font-bold;
+  }
+  
+  .text-section-header {
+    @apply text-[20px] leading-snug font-bold;
+  }
+  
+  .text-card-title {
+    @apply text-base leading-normal font-semibold;
+  }
+  
+  .text-body {
+    @apply text-sm leading-relaxed font-normal;
+  }
+  
+  .text-caption {
+    @apply text-xs leading-snug font-normal;
+  }
+}
+

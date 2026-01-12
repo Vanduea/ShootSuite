@@ -1,0 +1,43 @@
+{
+  "name": "ShootSuite - Photographer Job Manager",
+  "short_name": "ShootSuite",
+  "description": "Streamline your photography workflow with job management, invoicing, and client delivery",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#261a54",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon300.png",
+      "sizes": "300x300",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity", "photography"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "New Job",
+      "short_name": "New Job",
+      "description": "Create a new photography job",
+      "url": "/jobs/new",
+      "icons": [{ "src": "/icon128.png", "sizes": "128x128" }]
+    },
+    {
+      "name": "Dashboard",
+      "short_name": "Dashboard",
+      "description": "View your job dashboard",
+      "url": "/",
+      "icons": [{ "src": "/icon128.png", "sizes": "128x128" }]
+    }
+  ]
+}
+
